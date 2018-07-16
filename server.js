@@ -13,6 +13,14 @@ var app=express();
 // app.use(logger);
 
 
+//view engine ejs
+
+app.set('view engine','ejs');
+app.set('views'),path.join(__dirname,'views');
+
+
+
+
 // bodyparser middle ware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}))
@@ -20,14 +28,14 @@ app.use(bodyParser.urlencoded({extended: false}))
 //static path
 // app.use(express.static(path.join(__dirname,'public')));
 
-var person={
-    'name':'harsha',
-    'id':123
-}
+// var person={
+//     'name':'harsha',
+//     'id':123
+// }
 
 app.get('/',function(req,res){
     // console.log("inside get");
-    res.json(person);    
+    res.render('index');    
 });
 
 app.listen(5000,function(){
