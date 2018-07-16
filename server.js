@@ -35,7 +35,10 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 app.get('/',function(req,res){
     // console.log("inside get");
-    res.render('index');    
+    // var title='harshsa';
+    res.render('index',{
+        owner:'harsha'
+    });    
 });
 
 app.listen(5000,function(){
