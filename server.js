@@ -28,16 +28,23 @@ app.use(bodyParser.urlencoded({extended: false}))
 //static path
 // app.use(express.static(path.join(__dirname,'public')));
 
-// var person={
-//     'name':'harsha',
-//     'id':123
-// }
+var persons=[
+    {'name':'harsha',
+    'id':123
+    },
+    {
+        'name':'sri',
+        'id':345    
+    }
+
+]
 
 app.get('/',function(req,res){
     // console.log("inside get");
     // var title='harshsa';
     res.render('index',{
-        owner:'harsha'
+        owner:'harsha',
+        persons:persons,
     });    
 });
 

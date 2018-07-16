@@ -1,3 +1,12 @@
 <%include partials/header%>
 <h1> <%=owner %></h1>
+<h2>
+    
+    <%persons.forEach(function(item){ %>
+       <%= item.name%>
+       <%=item.id%>
+   <% }) %>
+
+
+</h2>
 <%include partials/footer%>
